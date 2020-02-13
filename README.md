@@ -1,2 +1,3 @@
 # wikiracer
-Wikiracer program for an AP CS course. S
+Wikiracer program for an AP CS course. 
+Uses JSsoup: https://jsoup.org/
