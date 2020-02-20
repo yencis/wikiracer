@@ -47,10 +47,11 @@ public class WikiRacer {
 		while(!articles.isEmpty()) {
 			Ladder ladder = articles.poll();
 			Article curArt = ladder.peek();
-			//System.out.println(curArt.doc.location());
+			System.out.println(curArt.doc.location());
 			if (curArt.contains(targetArticle.doc.location())) {
 				System.out.println("Found "+curArt);
 				result = ladder.copyLadder();
+				result.add(targetArticle);
 				break;
 			}
 			Elements artLinks = curArt.links;
@@ -83,6 +84,9 @@ public class WikiRacer {
 		Elements b = new Elements(a);
 		for (Element el : b) {
 			if (seen.contains(el.absUrl("href"))) {
+				a.remove(el);
+				continue;
+			}else if (el.absUrl("href").contains("Special:")) {
 				a.remove(el);
 				continue;
 			}else {

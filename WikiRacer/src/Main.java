@@ -13,7 +13,7 @@ public class Main {
 		for (Element el : links) {
 			System.out.println(el.toString());
 		}*/
-		Ladder l = WikiRacer.generateLadder("https://en.wikipedia.org/wiki/Magnesium","https://en.wikipedia.org/wiki/Jerry_Brown");
+		Ladder l = WikiRacer.generateLadder("https://en.wikipedia.org/wiki/Firefox","https://en.wikipedia.org/wiki/Cologne");
 		System.out.println(l);
 		/*Document doc = WikiRacer.getDocument("https://en.wikipedia.org/wiki/Hollywood_Boulevard");
 		Document testDoc = WikiRacer.getDocument("https://en.wikipedia.org/wiki/Charles_E._Toberman");
